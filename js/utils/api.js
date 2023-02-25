@@ -3,3 +3,7 @@ export const getContacts = async () => {
   const contacts = await response.json()
   return contacts
 }
+
+export const getContactDetail = async (id) => {
+  console.log('getContactDetail', id)
+}

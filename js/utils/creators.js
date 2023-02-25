@@ -29,3 +29,7 @@ export const renderContact = (contact, parent) => {
   li.append(link)
   parent.append(li)
 }
+
+export const renderContactPage = (data) => {
+  console.log('renderContactPage', data)
+}
