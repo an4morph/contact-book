@@ -13,3 +13,19 @@ export const createEl = ({ tag, className, text, checked, innerHTML, ...attrs })
 
   return element
 }
+
+/*
+<li class="contact-item">
+  <a href="/detail.html">name</a>
+</li>
+*/
+export const renderContact = (contact, parent) => {
+  const li = createEl({ tag: 'li', className: "contact-item" })
+  const link = createEl({
+    tag: 'a', 
+    href: '/detail.html',
+    text: contact.name
+  })
+  li.append(link)
+  parent.append(li)
+}
