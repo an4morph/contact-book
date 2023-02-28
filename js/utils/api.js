@@ -15,5 +15,12 @@ export const getContactDetail = async (id) => {
 }
 
 export const editContact = async (data, id) => {
-  console.log('editContact', data, id)
+  const response = await fetch(url('contacts/update', id), {
+    method: 'PUT',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  return response.json()
 }
