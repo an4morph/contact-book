@@ -19,7 +19,7 @@ getContactDetail(id)
 
 editButton.addEventListener('click', () => {
   localStorage.setItem('editData', JSON.stringify(contactData))
-  // window.location.href = `/edit.html?id=${id}`
+  window.location.href = `/edit.html`
 })
 
   
