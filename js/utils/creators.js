@@ -31,5 +31,13 @@ export const renderContact = (contact, parent) => {
 }
 
 export const renderContactPage = (data) => {
-  console.log('renderContactPage', data)
+  const nameBox = document.querySelector('.contact-name')
+  const numberBoxes = document.querySelectorAll('.phones .number')
+  const numberLinkBoxes = document.querySelectorAll('.phones a')
+
+  nameBox.textContent = data.name
+  numberBoxes[0].textContent = data.number1
+  numberBoxes[1].textContent = data.number2
+  numberLinkBoxes[0].setAttribute('href', `tel:${data.number1}`)
+  numberLinkBoxes[1].setAttribute('href', `tel:${data.number2}`)
 }

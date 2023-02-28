@@ -13,3 +13,5 @@ getContactDetail(id)
   .finally(() => {
     // убирать loader
   })
+
+  
