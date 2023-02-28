@@ -23,7 +23,7 @@ export const renderContact = (contact, parent) => {
   const li = createEl({ tag: 'li', className: "contact-item" })
   const link = createEl({
     tag: 'a', 
-    href: '/detail.html',
+    href: `/detail.html?id=${contact.id}`,
     text: contact.name
   })
   li.append(link)
