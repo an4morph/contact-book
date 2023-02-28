@@ -1,3 +1,5 @@
+import { formatDate } from "./index.js"
+
 export const createEl = ({ tag, className, text, checked, innerHTML, ...attrs }) => {
   const element = document.createElement(tag)
 
@@ -34,10 +36,13 @@ export const renderContactPage = (data) => {
   const nameBox = document.querySelector('.contact-name')
   const numberBoxes = document.querySelectorAll('.phones .number')
   const numberLinkBoxes = document.querySelectorAll('.phones a')
+  const birthdayBox = document.querySelector('.birthday .info')
+  console.log(birthdayBox)
 
   nameBox.textContent = data.name
   numberBoxes[0].textContent = data.number1
   numberBoxes[1].textContent = data.number2
   numberLinkBoxes[0].setAttribute('href', `tel:${data.number1}`)
   numberLinkBoxes[1].setAttribute('href', `tel:${data.number2}`)
+  birthdayBox.textContent = `Birthday: ${formatDate(data.birthday)}`
 }
