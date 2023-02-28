@@ -1,4 +1,5 @@
 import { formatDate } from "./utils/index.js"
+import { editContact } from "./utils/api.js"
 
 const editData = JSON.parse(localStorage.getItem('editData'))
 const saveBtn = document.querySelector('.save-btn')
@@ -21,5 +22,6 @@ saveBtn.addEventListener('click', (e) => {
     number2: number1Input.value,
     birthday: new Date(dateInput.value).toISOString()
   }
-  console.log(updatedContact)
+  
+  editContact(updatedContact, editData.id)
 })

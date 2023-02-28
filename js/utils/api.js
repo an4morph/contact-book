@@ -13,3 +13,7 @@ export const getContactDetail = async (id) => {
   const contact = await response.json()
   return contact
 }
+
+export const editContact = async (data, id) => {
+  console.log('editContact', data, id)
+}
